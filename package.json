@@ -17,6 +17,7 @@
 	"scripts": {
 		"start": "cds serve",
 		"dev": "cds watch",
+		"build": "cds build -4 nodejs --dest build",
 		"watch-m.book": "cds watch --open m.book/webapp/index.html?sap-ui-xx-viewCache=false",
 		"watch-book": "cds watch --open book/webapp/index.html?sap-ui-xx-viewCache=false"
 	},
