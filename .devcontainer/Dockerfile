@@ -24,3 +24,5 @@ RUN echo 'export PS1=${PS1/\$ /\\\\n$ }' >> /home/node/.bashrc
 
 # Ready!
 WORKDIR /home/node
+
+EXPOSE 4004
