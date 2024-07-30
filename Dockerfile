@@ -11,7 +11,7 @@ RUN apt-get update \
 
 # Install SAP CAP SDK globally
 USER node
-RUN npm install -g @sap/cds-dk@$CAPVER
+# RUN npm install -g @sap/cds-dk@$CAPVER
 
 # vi mode everywhere and nicer prompt KTHXBAI
 RUN cat <<EOBASHRC >> /home/node/.bashrc
@@ -32,7 +32,7 @@ COPY . /home/node/
 # ARG PACKAGES="cap-js/sqlite@1.7.3"
 
 # # # Install dependencies (if needed)
-RUN npm install --prod
+RUN npm install --omit=dev
 
 # Start your CAP application
 
