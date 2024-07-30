@@ -27,11 +27,16 @@ WORKDIR /home/node
 
 # Copy your SAP CAP project files into the container
 COPY . /home/node/
+# COPY package.json package-lock.json ./
 
-# # Install dependencies (if needed)
-# RUN npm install
+# ARG PACKAGES="cap-js/sqlite@1.7.3"
+
+# # # Install dependencies (if needed)
+RUN npm install --prod
 
 # Start your CAP application
+
+
 CMD ["npm", "start"]
 
 EXPOSE 4004
