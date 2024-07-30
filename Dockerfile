@@ -25,4 +25,27 @@ RUN echo 'export PS1=${PS1/\$ /\\\\n$ }' >> /home/node/.bashrc
 # Ready!
 WORKDIR /home/node
 
+# Copy your SAP CAP project files into the container
+COPY . /home/node/
+
+# # Install dependencies (if needed)
+# RUN npm install
+
+# Start your CAP application
+CMD ["npm", "start"]
+
 EXPOSE 4004
+
+# # Use a Node.js base image
+# FROM node:14-alpine
+
+# # Set the working directory
+# WORKDIR /usr/src/app
+
+# ADD /../. .
+
+# # Install dependencies (if needed)
+# RUN npm install
+
+# # Start your CAP application
+# CMD ["npm", "start"]
