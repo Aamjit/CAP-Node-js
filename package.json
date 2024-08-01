@@ -1,54 +1,55 @@
 {
-	"name": "CAP-Node-js",
-	"version": "1.0.0",
-	"description": "A simple CAP project.",
-	"repository": "<Add your repository here>",
-	"license": "UNLICENSED",
-	"private": true,
-	"dependencies": {
-		"@cap-js/sqlite": "^1.7.3",
-		"@sap/cds": "^7",
-		"@sap/cds-dk": "^8.1.0",
-		"express": "^4"
-	},
-	"devDependencies": {
-		"@sap/eslint-plugin-cds": "^3",
-		"eslint": "^9"
-	},
-	"scripts": {
-		"start": "cds serve --port 4004",
-		"dev": "cds watch",
-		"build": "cds build -4 nodejs --dest build",
-		"watch-m.book": "cds watch --open m.book/webapp/index.html?sap-ui-xx-viewCache=false",
-		"watch-book": "cds watch --open book/webapp/index.html?sap-ui-xx-viewCache=false"
-	},
-	"sapux": [
-		"app/m.book",
-		"app/book"
-	],
-	"cds": {
-		"requires": {
-			"[development]": {
-				"auth": {
-					"kind": "mocked",
-					"users": {
-						"user": {
-							"password": "user",
-							"id": "user",
-							"roles": [
-								"user"
-							]
-						},
-						"admin": {
-							"password": "root",
-							"id": "admin",
-							"roles": [
-								"admin"
-							]
-						}
-					}
-				}
-			}
-		}
-	}
+  "name": "CAP-Node-js",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@cap-js/sqlite": "^1.7.3",
+    "@sap/cds": "^7",
+    "@sap/cds-dk": "^8.1.0",
+    "express": "^4"
+  },
+  "devDependencies": {
+    "@sap/cds-dk": "^7",
+    "@sap/eslint-plugin-cds": "^3",
+    "eslint": "^9"
+  },
+  "scripts": {
+    "start": "cds serve",
+    "dev": "cds watch",
+    "build": "cds build -4 nodejs --dest build",
+    "watch-m.book": "cds watch --open m.book/webapp/index.html?sap-ui-xx-viewCache=false",
+    "watch-book": "cds watch --open book/webapp/index.html?sap-ui-xx-viewCache=false"
+  },
+  "sapux": [
+    "app/m.book",
+    "app/book"
+  ],
+  "cds": {
+    "requires": {
+      "[development]": {
+        "auth": {
+          "kind": "mocked",
+          "users": {
+            "user": {
+              "password": "user",
+              "id": "user",
+              "roles": [
+                "user"
+              ]
+            },
+            "admin": {
+              "password": "root",
+              "id": "admin",
+              "roles": [
+                "admin"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
 }
